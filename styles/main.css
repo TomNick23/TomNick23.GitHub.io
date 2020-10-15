@@ -2052,7 +2052,7 @@ p > code {
   }
 }
 body {
-      background-color: #f8f0fc;
+      background-color: #fff5f5;
     }.header {
         width: 960px;
         margin: 0 auto;
@@ -2063,11 +2063,11 @@ body {
         margin: 0 auto;
       }
     @font-face {
-      font-family: 'hand';
-      src: url('/media/fonts/hand.ttf');
+      font-family: 'hand.ttf';
+      src: url('/media/fonts/hand.ttf.ttf');
     }
     * {
-        font-family: 'hand';
+        font-family: 'hand.ttf';
     }
     .katex-block *{
       font-family: 'KaTeX_Main';
@@ -2086,28 +2086,28 @@ body {
       border-bottom-color: #555;
     }
     .archive-timeline-box::after, .tag-timeline-wrapper::after {
-      background: #8ce99afe;
+      background: #f08c00fe;
     }h1, h2, h3, h4, h5, h6 {
-      color: #f783ac;
+      color: #c92a2a;
     }
     
     .archive-timeline-title::before {
-      background-color: #f783ac;
+      background-color: #c92a2a;
     }
     
     .post-title-link::before {
-      background-color: #f783ac;
+      background-color: #c92a2a;
     }
     
     .node-title::before {
-      background-color: #f783ac;
+      background-color: #c92a2a;
     }a {
-      color: #20c997;
+      color: #5f3dc4;
     }
     
     .next-md-body a, .friends-box a  {
-      color: #20c997;
-      border-bottom: 1px solid #20c997;
+      color: #5f3dc4;
+      border-bottom: 1px solid #5f3dc4;
     }a:hover {
       color: #222;
     }
@@ -2124,9 +2124,8 @@ body {
     .next-md-body a:hover, .friends-box a:hover {
       color: #222;
       border-bottom-color: #222;
-    }
-    .nav-toggle .line {
-      background-color:  !important;
+    }.nav-toggle .line {
+      background-color: #e67700 !important;
     }
       .nav-item a {
         color:  #555;
@@ -2149,11 +2148,11 @@ body {
       transition-duration: 59s;
       transition-timing-function: cubic-bezier(.34,0,.84,1);
     }.markdownIt-TOC a {
-      color: #eee;
-      border-bottom-color: #eee;
+      color: #be4bdb;
+      border-bottom-color: #be4bdb;
     }.markdownIt-TOC a:hover {
-      color: #fff;
-      border-bottom-color: #fff;
+      color: #e599f7;
+      border-bottom-color: #e599f7;
     }.active-current > a {
       color: #fc6423 !important;
       border-bottom-color: #fc6423 !important;
@@ -2172,27 +2171,27 @@ body {
     .active-hidden > a {
       color: #fc6423;
       border-bottom-color: #fc6423;
-    }.reward-btn-text {
-        background-color: #ffe066fe !important;
-      }.bg-color {
-      background-color: #edf2fffe;
+    }.bg-color {
+      background-color: #99e9f2fe;
     }
     .site-meta {
-      background: #c5f6fa !important;
+      background: #d0ebff !important;
     }
     .head-top-line {
-      background: #c5f6fa;
+      background: #d0ebff;
     }
     .brand {
-      background: #c5f6fafe;
+      background: #000000fe;
     }
     .main-title, .brand {
-      color: #e03131 !important;
+      color: #f08c00 !important;
     }
     .mist .site-title i {
-      background: #e03131fe;
+      background: #f08c00fe;
     }.box-scale > #landlord {
-      transform: scale([01]);
+      transform: scale([0,1]);
+    }.box-shadow-wrapper {
+      padding: 10px;
     }.box-shadow-wrapper {
       box-shadow: none !important;
     }body {
