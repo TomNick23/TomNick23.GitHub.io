@@ -5,18 +5,18 @@
   <meta charset="UTF-8" />
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
-<meta name="keywords" content="">
+<meta name="keywords" content="听雨轩里的猫咪老师">
 <meta name="description" content="念念不忘，必有回响">
-<meta name="theme-color" content="">
+<meta name="theme-color" content="#c5f6fa">
 <title>听雨轩</title>
-<link rel="shortcut icon" href="/favicon.ico?v=1603042978975">
-<link rel="stylesheet" href="/media/css/pisces.css">
+<link rel="shortcut icon" href="/favicon.ico?v=1603044151615">
+<link rel="stylesheet" href="/media/css/gemini.css">
 <link rel="stylesheet" href="/media/fonts/font-awesome.css">
 <link
   href="//fonts.googleapis.com/css?family=Monda:300,300italic,400,400italic,700,700italic|Roboto Slab:300,300italic,400,400italic,700,700italic|Rosario:300,300italic,400,400italic,700,700italic|PT Mono:300,300italic,400,400italic,700,700italic&subset=latin,latin-ext"
   rel="stylesheet" type="text/css">
 
-<link href="/media/hljs/styles/github.css"
+<link href="/media/hljs/styles/default.css"
   rel="stylesheet">
 
 <link rel="stylesheet" href="/styles/main.css">
@@ -28,11 +28,25 @@
   integrity="sha384-zB1R0rpPzHqg7Kpt0Aljp8JPLqbXI3bhnPWROx27a9N0Ll6ZP/+DiW/UqRcLbRjq" crossorigin="anonymous">
 
 
-<script defer src="https://cdn.jsdelivr.net/npm/katex@0.11.1/dist/katex.min.js"
-  integrity="sha384-y23I5Q6l+B6vatafAwxRu/0oK/79VlbSz7Q9aiSZUvyWYIYsd+qj+o24G5ZU2zJz" crossorigin="anonymous"></script>
-<script defer src="https://cdn.jsdelivr.net/npm/katex@0.11.1/dist/contrib/auto-render.min.js"
-  integrity="sha384-kWPLUVMOks5AQFrykwIup5lo0m3iMkkHrD0uJ4H5cjeGihAutqP0yW0J6dpFiVkI" crossorigin="anonymous"
-  onload="renderMathInElement(document.body);"></script>
+<script>
+  window.MathJax = {
+    tex: {
+      inlineMath: [['$', '$'], ["\\(", "\\)"]],
+      displayMath: [['$$', '$$'], ["\\[", "\\]"]]
+    },
+    options: {
+      skipHtmlTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code', 'a', 'annotation', 'annotation-xml'],
+      ignoreHtmlClass: 'tex2jax_ignore|crayon-.*', // 'crayon-' 开头的类，属于Wordpress代码高亮库，这部分不需要处理，否则会导致显示不正确,这部分是正则式，多条之间用'|'分割
+      processHtmlClass: 'tex2jax_process'
+    },
+    //禁用右键菜单	
+    renderActions: {
+      addMenu: [0, '', '']
+    }
+  };
+</script>
+<script type="text/javascript"
+  src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
 
 
 
@@ -44,7 +58,7 @@
   <div class="head-top-line"></div>
   <div class="header-box">
     
-<div class="pisces">
+<div class="gemini">
   <header class="header  ">
     <div class="blog-header box-shadow-wrapper bg-color " id="header">
       <div class="nav-toggle" id="nav_toggle">
@@ -62,6 +76,8 @@
             </a>  
           
         </div>
+        
+          <p class="subtitle">客官请笑纳</p>
         
       </div>
       <nav class="site-nav" id="site_nav">
@@ -113,6 +129,12 @@
           
           
           
+            <li id="fa_search" class="nav-item">
+              <a href="javascript:void(0);">
+                <i class="fa fa-search"></i> <span class="language" data-lan="search">搜索</span>
+              </a>
+            </li>
+          
         </ul>
       </nav>
     </div>
@@ -144,14 +166,20 @@
   <div class="main-continer">
     
     <div
-      class="section-layout  pisces">
+      class="section-layout  gemini">
       <div class="section-layout-wrapper">
         <div id="sidebarMeta" class="sidebar">
     
 <div class="sidebar-wrapper box-shadow-wrapper bg-color">
   <div class="sidebar-item">
     <img class="site-author-image right-motion" src="/images/avatar.png"/>
-    <p class="site-author-name"></p>
+    <p class="site-author-name">猫咪老师</p>
+    
+    <div class="site-description right-motion">
+      
+        <p id="binft">听说听雨轩有只猫咪老师\n 等风起 等雨停\n</p>
+      
+    </div>
     
   </div>
   <div class="sidebar-item side-item-stat right-motion">
@@ -177,7 +205,43 @@
   </div>
   
     
+      <div class="sidebar-item">
+        <span class="site-item-rss">
+            <i class="fa fa-rss"></i>
+            <a href="https://TomNick23.GitHub.io/atom.xml" target="_blank">RSS</a>
+        </span>
+      </div>
+    
   
+  
+    <div class="sidebar-item sidebar-item-social">
+      <div class="social-item">
+        
+          
+            <a href="https://github.com/TomNick23">
+              <i class="fa fa-github-alt" title="GitHub"></i>
+            </a>
+          
+            <a href="https://weibo.com/u/7265134669/home?wvr=5&amp;sudaref=passport.weibo.com">
+              <i class="fa fa-twitter" title="微博"></i>
+            </a>
+          
+        
+        
+          
+            <a class="social-img" href="#">
+              <img src="\media\images\custom-array-imgSocials-1603044151303-socialImg.jpg" />
+              <i class="fa fa-qq" title="QQ" ></i>
+            </a>
+          
+            <a class="social-img" href="#">
+              <img src="\media\images\custom-array-imgSocials-1603044151304-socialImg.jpg" />
+              <i class="fa fa-WeChat" title="微信公众号" ></i>
+            </a>
+          
+        
+      </div>
+    </div>
   
 
   
@@ -188,7 +252,7 @@
 </div>
 <script>
   let sidebarMeta = document.querySelector('#sidebarMeta');
-  let scheme = '';
+  let scheme = 'gemini';
   let sidebarWrapper = document.querySelector('.sidebar-wrapper');
   if (sidebarMeta && (scheme === 'pisces' || scheme === 'gemini')) {
     document.addEventListener('scroll', function(e) {
@@ -320,7 +384,7 @@
   </footer>
   
   
-  <div class="pisces back-to-top" id="back_to_top">
+  <div class="gemini back-to-top" id="back_to_top">
     <i class="fa fa-arrow-up"></i>
     
     <span class="scrollpercent">
@@ -331,11 +395,556 @@
   
   
   
+  <div class="bg-img">
+    <img src="\media\images\custom-bgImg.bmp" />
+  </div>
   
   
   
   
+<link rel="stylesheet" href="/media/live2d/css/live2d.css" />
+<div class="box-scale">
+  <div id="landlord" style="left: 3px;bottom: 3px;"
+    data-key="">
+    <canvas id="live2d" width="500" height="560" class="live2d"></canvas>
+    
 
+      <div class="message" style="opacity:0"></div>
+      <div class="live_talk_input_body">
+        <div class="live_talk_input_name_body">
+          <input name="name" type="text" class="live_talk_name white_input" id="AIuserName" autocomplete="off"
+            placeholder="你的名字" />
+        </div>
+        <div class="live_talk_input_text_body">
+          <input name="talk" type="text" class="live_talk_talk white_input" id="AIuserText" autocomplete="off"
+            placeholder="要和我聊什么呀？" />
+          <button type="button" class="live_talk_send_btn" id="talk_send">发送</button>
+        </div>
+      </div>
+      <input name="live_talk" id="live_talk" value="1" type="hidden" />
+      <div class="live_ico_box">
+        <div class="live_ico_item type_info" id="showInfoBtn"></div>
+        <div class="live_ico_item type_talk" id="showTalkBtn"></div>
+        
+        <div class="live_ico_item type_music" id="musicButton"></div>
+        
+        <div class="live_ico_item type_youdu" id="youduButton"></div>
+        <div class="live_ico_item type_quit" id="hideButton"></div>
+        <input name="live_statu_val" id="live_statu_val" value="0" type="hidden" />
+        <audio src="" style="display:none;" id="live2d_bgm" data-bgm="0" preload="none"></audio>
+        <input id="duType" value="douqilai" type="hidden">
+        
+        <input name="live2dBGM" value="http://fs.pc.kugou.com/202010190201/469305c48737bdf243c09c1a5f6cf36d/G227/M05/04/08/Iw4DAF9EtSyAHni8AEKYmb_KItw819.mp3" type="hidden">
+        
+      </div>
+    
+  </div>
+</div>
+<div id="open_live2d">召唤看板娘</div>
+<script src="https://libs.baidu.com/jquery/2.0.0/jquery.min.js"></script>
+<script>
+  var message_Path = 'https://cdn.jsdelivr.net/gh/hsxyhao/live2d.github.io@master/';
+  let landlord = document.querySelector('#landlord');
+  var apiKey = landlord.dataset.key;
+</script>
+<script type="text/javascript" src="/media/live2d/js/live2d.js"></script>
+<script>
+	var home_Path = document.location.protocol + '//' + window.document.location.hostname + ":" + window.document.location.port + '/';
+	var userAgent = window.navigator.userAgent.toLowerCase();
+	var norunAI = ["android", "iphone", "ipod", "ipad", "windows phone", "mqqbrowser", "msie", "trident/7.0"];
+	var norunFlag = false;
+
+	for (var i = 0; i < norunAI.length; i++) {
+		if (userAgent.indexOf(norunAI[i]) > -1) {
+			norunFlag = true;
+			break;
+		}
+	}
+
+	if (!window.WebGLRenderingContext) {
+		norunFlag = true;
+	}
+
+	if (!norunFlag) {
+		var hitFlag = false;
+		var AIFadeFlag = false;
+		var liveTlakTimer = null;
+		var sleepTimer_ = null;
+		var AITalkFlag = false;
+		var talkNum = 0;
+		(function () {
+			function renderTip(template, context) {
+				var tokenReg = /(\\)?\{([^\{\}\\]+)(\\)?\}/g;
+				return template.replace(tokenReg, function (word, slash1, token, slash2) {
+					if (slash1 || slash2) {
+						return word.replace('\\', '');
+					}
+					var variables = token.replace(/\s/g, '').split('.');
+					var currentObject = context;
+					var i, length, variable;
+					for (i = 0, length = variables.length; i < length; ++i) {
+						variable = variables[i];
+						currentObject = currentObject[variable];
+						if (currentObject === undefined || currentObject === null) return '';
+					}
+					return currentObject;
+				});
+			}
+
+			String.prototype.renderTip = function (context) {
+				return renderTip(this, context);
+			};
+
+			var re = /x/;
+			re.toString = function () {
+				showMessage('哈哈，你打开了控制台，是想要看看我的秘密吗？', 5000);
+				return '';
+			};
+
+			$(document).on('copy', function () {
+				showMessage('你都复制了些什么呀，转载要记得加上出处哦~~', 5000);
+			});
+
+			function initTips() {
+				$.ajax({
+					cache: true,
+					url: message_Path + 'message.json',
+					dataType: "json",
+					success: function (result) {
+						$.each(result.mouseover, function (index, tips) {
+							$(tips.selector).mouseover(function () {
+								var text = tips.text;
+								if (Array.isArray(tips.text)) text = tips.text[Math.floor(Math.random() * tips.text.length + 1) - 1];
+								text = text.renderTip({ text: $(this).text() });
+								showMessage(text, 3000);
+								talkValTimer();
+								clearInterval(liveTlakTimer);
+								liveTlakTimer = null;
+							});
+							$(tips.selector).mouseout(function () {
+								showHitokoto();
+								if (liveTlakTimer == null) {
+									liveTlakTimer = window.setInterval(function () {
+										showHitokoto();
+									}, 15000);
+								};
+							});
+						});
+						$.each(result.click, function (index, tips) {
+							$(tips.selector).click(function () {
+								if (hitFlag) {
+									return false
+								}
+								hitFlag = true;
+								setTimeout(function () {
+									hitFlag = false;
+								}, 8000);
+								var text = tips.text;
+								if (Array.isArray(tips.text)) text = tips.text[Math.floor(Math.random() * tips.text.length + 1) - 1];
+								text = text.renderTip({ text: $(this).text() });
+								showMessage(text, 3000);
+							});
+							clearInterval(liveTlakTimer);
+							liveTlakTimer = null;
+							if (liveTlakTimer == null) {
+								liveTlakTimer = window.setInterval(function () {
+									showHitokoto();
+								}, 15000);
+							};
+						});
+					}
+				});
+			}
+			initTips();
+
+			var text;
+			if (document.referrer !== '') {
+				var referrer = document.createElement('a');
+				referrer.href = document.referrer;
+				text = '嗨！来自 <span style="color:#0099cc;">' + referrer.hostname + '</span> 的朋友！';
+				var domain = referrer.hostname.split('.')[1];
+				if (domain == 'baidu') {
+					text = '嗨！ 来自 百度搜索 的朋友！<br>欢迎访问<span style="color:#0099cc;">「 ' + document.title.split(' - ')[0] + ' 」</span>';
+				} else if (domain == 'so') {
+					text = '嗨！ 来自 360搜索 的朋友！<br>欢迎访问<span style="color:#0099cc;">「 ' + document.title.split(' - ')[0] + ' 」</span>';
+				} else if (domain == 'google') {
+					text = '嗨！ 来自 谷歌搜索 的朋友！<br>欢迎访问<span style="color:#0099cc;">「 ' + document.title.split(' - ')[0] + ' 」</span>';
+				}
+			} else {
+				if (window.location.href == home_Path) { //主页URL判断，需要斜杠结尾
+					var now = (new Date()).getHours();
+					if (now > 23 || now <= 5) {
+						text = '你是夜猫子呀？这么晚还不睡觉，明天起的来嘛？';
+					} else if (now > 5 && now <= 7) {
+						text = '早上好！一日之计在于晨，美好的一天就要开始了！';
+					} else if (now > 7 && now <= 11) {
+						text = '上午好！工作顺利嘛，不要久坐，多起来走动走动哦！';
+					} else if (now > 11 && now <= 14) {
+						text = '中午了，工作了一个上午，现在是午餐时间！';
+					} else if (now > 14 && now <= 17) {
+						text = '午后很容易犯困呢，今天的运动目标完成了吗？';
+					} else if (now > 17 && now <= 19) {
+						text = '傍晚了！窗外夕阳的景色很美丽呢，最美不过夕阳红~~';
+					} else if (now > 19 && now <= 21) {
+						text = '晚上好，今天过得怎么样？';
+					} else if (now > 21 && now <= 23) {
+						text = '已经这么晚了呀，早点休息吧，晚安~~';
+					} else {
+						text = '嗨~ 快来逗我玩吧！';
+					}
+				} else {
+					text = '欢迎阅读<span style="color:#0099cc;">「 ' + document.title.split(' - ')[0] + ' 」</span>';
+				}
+			}
+			showMessage(text, 12000);
+		})();
+
+		liveTlakTimer = setInterval(function () {
+			showHitokoto();
+		}, 15000);
+
+		function showHitokoto() {
+			if (sessionStorage.getItem("Sleepy") !== "1") {
+				if (!AITalkFlag) {
+					$.getJSON('https://v1.hitokoto.cn/', function (result) {
+						talkValTimer();
+						showMessage(result.hitokoto, 0);
+					});
+				}
+			} else {
+				hideMessage(0);
+				if (sleepTimer_ == null) {
+					sleepTimer_ = setInterval(function () {
+						checkSleep();
+					}, 200);
+				}
+			}
+		}
+
+		function checkSleep() {
+			var sleepStatu = sessionStorage.getItem("Sleepy");
+			if (sleepStatu !== '1') {
+				talkValTimer();
+				showMessage('你回来啦~', 0);
+				clearInterval(sleepTimer_);
+				sleepTimer_ = null;
+			}
+		}
+
+		function showMessage(text, timeout) {
+			if (Array.isArray(text)) text = text[Math.floor(Math.random() * text.length + 1) - 1];
+			$('.message').stop();
+			$('.message').html(text);
+			$('.message').fadeTo(200, 1);
+			//if (timeout === null) timeout = 5000;
+			//hideMessage(timeout);
+		}
+		function talkValTimer() {
+			$('#live_talk').val('1');
+		}
+
+		function hideMessage(timeout) {
+			//$('.message').stop().css('opacity',1);
+			if (timeout === null) timeout = 5000;
+			$('.message').delay(timeout).fadeTo(200, 0);
+		}
+
+		function initLive2d() {
+			$('#hideButton').on('click', function () {
+				if (AIFadeFlag) {
+					return false;
+				} else {
+					AIFadeFlag = true;
+					localStorage.setItem("live2dhidden", "0");
+					$('#landlord').fadeOut(200);
+					$('#open_live2d').delay(200).fadeIn(200);
+					setTimeout(function () {
+						AIFadeFlag = false;
+					}, 300);
+				}
+			});
+			$('#open_live2d').on('click', function () {
+				if (AIFadeFlag) {
+					return false;
+				} else {
+					AIFadeFlag = true;
+					localStorage.setItem("live2dhidden", "1");
+					$('#open_live2d').fadeOut(200);
+					$('#landlord').delay(200).fadeIn(200);
+					setTimeout(function () {
+						AIFadeFlag = false;
+					}, 300);
+				}
+			});
+			$('#youduButton').on('click', function () {
+				if ($('#youduButton').hasClass('doudong')) {
+					var typeIs = $('#youduButton').attr('data-type');
+					$('#youduButton').removeClass('doudong');
+					$('body').removeClass(typeIs);
+					$('#youduButton').attr('data-type', '');
+				} else {
+					var duType = $('#duType').val();
+					var duArr = duType.split(",");
+					var dataType = duArr[Math.floor(Math.random() * duArr.length)];
+
+					$('#youduButton').addClass('doudong');
+					$('#youduButton').attr('data-type', dataType);
+					$('body').addClass(dataType);
+				}
+			});
+			if (apiKey) {
+				$('#showInfoBtn').on('click', function () {
+					var live_statu = $('#live_statu_val').val();
+					if (live_statu == "0") {
+						return
+					} else {
+						$('#live_statu_val').val("0");
+						$('.live_talk_input_body').fadeOut(500);
+						AITalkFlag = false;
+						showHitokoto();
+						$('#showTalkBtn').show();
+						$('#showInfoBtn').hide();
+					}
+				});
+				$('#showTalkBtn').on('click', function () {
+					var live_statu = $('#live_statu_val').val();
+					if (live_statu == "1") {
+						return
+					} else {
+						$('#live_statu_val').val("1");
+						$('.live_talk_input_body').fadeIn(500);
+						AITalkFlag = true;
+						$('#showTalkBtn').hide();
+						$('#showInfoBtn').show();
+
+					}
+				});
+				$('#talk_send').on('click', function () {
+					var info_ = $('#AIuserText').val();
+					var userid_ = $('#AIuserName').val();
+					if (info_ == "") {
+						showMessage('写点什么吧！', 0);
+						return;
+					}
+					if (userid_ == "") {
+						showMessage('聊之前请告诉我你的名字吧！', 0);
+						return;
+					}
+					showMessage('思考中~', 0);
+					let protocol = window.location.protocol.indexOf("s") > 0 ? "https" : "http";
+					$.ajax({
+						type: "get",
+						url: `${protocol}://www.tuling123.com/openapi/api?key=${apiKey}&info=${info_}`,
+						dataType: "json",
+						success: function (res) {
+							talkValTimer();
+							showMessage(res.text, 0);
+							$('#AIuserText').val("");
+							sessionStorage.setItem("live2duser", userid_);
+						},
+						error: function (e) {
+							talkValTimer();
+							showMessage('似乎有什么错误，请和站长联系！', 0);
+						}
+					});
+				});
+			} else {
+				$('#showInfoBtn').hide();
+				$('#showTalkBtn').hide();
+			}
+			//获取音乐信息初始化
+			var bgmListInfo = $('input[name=live2dBGM]');
+			if (bgmListInfo.length == 0) {
+				$('#musicButton').hide();
+			} else {
+				var bgmPlayNow = parseInt($('#live2d_bgm').attr('data-bgm'));
+				var bgmPlayTime = 0;
+				var live2dBGM_Num = sessionStorage.getItem("live2dBGM_Num");
+				var live2dBGM_PlayTime = sessionStorage.getItem("live2dBGM_PlayTime");
+				if (live2dBGM_Num) {
+					if (live2dBGM_Num <= $('input[name=live2dBGM]').length - 1) {
+						bgmPlayNow = parseInt(live2dBGM_Num);
+					}
+				}
+				if (live2dBGM_PlayTime) {
+					bgmPlayTime = parseInt(live2dBGM_PlayTime);
+				}
+				var live2dBGMSrc = bgmListInfo.eq(bgmPlayNow).val();
+				$('#live2d_bgm').attr('data-bgm', bgmPlayNow);
+				$('#live2d_bgm').attr('src', live2dBGMSrc);
+				$('#live2d_bgm')[0].currentTime = bgmPlayTime;
+				$('#live2d_bgm')[0].volume = 0.5;
+				var live2dBGM_IsPlay = sessionStorage.getItem("live2dBGM_IsPlay");
+				var live2dBGM_WindowClose = sessionStorage.getItem("live2dBGM_WindowClose");
+				if (live2dBGM_IsPlay == '0' && live2dBGM_WindowClose == '0') {
+					$('#live2d_bgm')[0].play();
+					$('#musicButton').addClass('play');
+				}
+				sessionStorage.setItem("live2dBGM_WindowClose", '1');
+				$('#musicButton').on('click', function () {
+					if ($('#musicButton').hasClass('play')) {
+						$('#live2d_bgm')[0].pause();
+						$('#musicButton').removeClass('play');
+						sessionStorage.setItem("live2dBGM_IsPlay", '1');
+					} else {
+						$('#live2d_bgm')[0].play();
+						$('#musicButton').addClass('play');
+						sessionStorage.setItem("live2dBGM_IsPlay", '0');
+					}
+				});
+				window.onbeforeunload = function () {
+					sessionStorage.setItem("live2dBGM_WindowClose", '0');
+					if ($('#musicButton').hasClass('play')) {
+						sessionStorage.setItem("live2dBGM_IsPlay", '0');
+					}
+				}
+				document.getElementById('live2d_bgm').addEventListener("timeupdate", function () {
+					var live2dBgmPlayTimeNow = document.getElementById('live2d_bgm').currentTime;
+					sessionStorage.setItem("live2dBGM_PlayTime", live2dBgmPlayTimeNow);
+				});
+				document.getElementById('live2d_bgm').addEventListener("ended", function () {
+					var listNow = parseInt($('#live2d_bgm').attr('data-bgm'));
+					listNow++;
+					if (listNow > $('input[name=live2dBGM]').length - 1) {
+						listNow = 0;
+					}
+					var listNewSrc = $('input[name=live2dBGM]').eq(listNow).val();
+					sessionStorage.setItem("live2dBGM_Num", listNow);
+					$('#live2d_bgm').attr('src', listNewSrc);
+					$('#live2d_bgm')[0].play();
+					$('#live2d_bgm').attr('data-bgm', listNow);
+				});
+				document.getElementById('live2d_bgm').addEventListener("error", function () {
+					$('#live2d_bgm')[0].pause();
+					$('#musicButton').removeClass('play');
+					showMessage('音乐似乎加载不出来了呢！', 0);
+				});
+			}
+			//获取用户名
+			var live2dUser = sessionStorage.getItem("live2duser");
+			if (live2dUser !== null) {
+				$('#AIuserName').val(live2dUser);
+			}
+			//获取位置
+			var landL = sessionStorage.getItem("historywidth");
+			var landB = sessionStorage.getItem("historyheight");
+			if (landL == null || landB == null) {
+				landL = '5px'
+				landB = '0px'
+			}
+			$('#landlord').css('left', landL + 'px');
+			$('#landlord').css('bottom', landB + 'px');
+			//移动
+			function getEvent() {
+				return window.event || arguments.callee.caller.arguments[0];
+			}
+			var smcc = document.getElementById("landlord");
+			var moveX = 0;
+			var moveY = 0;
+			var moveBottom = 0;
+			var moveLeft = 0;
+			var moveable = false;
+			var docMouseMoveEvent = document.onmousemove;
+			var docMouseUpEvent = document.onmouseup;
+			smcc.onmousedown = function () {
+				var ent = getEvent();
+				moveable = true;
+				moveX = ent.clientX;
+				moveY = ent.clientY;
+				var obj = smcc;
+				moveBottom = parseInt(obj.style.bottom);
+				moveLeft = parseInt(obj.style.left);
+				if (isFirefox = navigator.userAgent.indexOf("Firefox") > 0) {
+					window.getSelection().removeAllRanges();
+				}
+				document.onmousemove = function () {
+					if (moveable) {
+						var ent = getEvent();
+						var x = moveLeft + ent.clientX - moveX;
+						var y = moveBottom + (moveY - ent.clientY);
+						obj.style.left = x + "px";
+						obj.style.bottom = y + "px";
+					}
+				};
+				document.onmouseup = function () {
+					if (moveable) {
+						var historywidth = obj.style.left;
+						var historyheight = obj.style.bottom;
+						historywidth = historywidth.replace('px', '');
+						historyheight = historyheight.replace('px', '');
+						sessionStorage.setItem("historywidth", historywidth);
+						sessionStorage.setItem("historyheight", historyheight);
+						document.onmousemove = docMouseMoveEvent;
+						document.onmouseup = docMouseUpEvent;
+						moveable = false;
+						moveX = 0;
+						moveY = 0;
+						moveBottom = 0;
+						moveLeft = 0;
+					}
+				};
+			};
+		}
+		$(document).ready(function () {
+			var AIimgSrc = [];
+			let chooseLive2d = 'rem'
+			if (chooseLive2d === 'histoire') {
+				AIimgSrc.push(message_Path + "model/histoire/histoire.1024/texture_00.png");
+				AIimgSrc.push(message_Path + "model/histoire/histoire.1024/texture_01.png");
+				AIimgSrc.push(message_Path + "model/histoire/histoire.1024/texture_02.png");
+				AIimgSrc.push(message_Path + "model/histoire/histoire.1024/texture_03.png");
+			} else if (chooseLive2d === 'rem') {
+				AIimgSrc.push(message_Path + "model/rem/remu2048/texture_00.png");
+			} else if (chooseLive2d === 'aoba') {
+				AIimgSrc.push(message_Path + "model/aoba/textures/texture_00.png");
+			} else if (chooseLive2d === 'hijiki') {
+				AIimgSrc.push(message_Path + "model/hijiki/moc/hijiki.2048/texture_00.png");
+			} else if (chooseLive2d === 'tororo') {
+				AIimgSrc.push(message_Path + "model/tororo/moc/tororo.2048/texture_00.png");
+			}
+			var images = [];
+			var imgLength = AIimgSrc.length;
+			var loadingNum = 0;
+			for (var i = 0; i < imgLength; i++) {
+				images[i] = new Image();
+				images[i].src = AIimgSrc[i];
+				images[i].onload = function () {
+					loadingNum++;
+					if (loadingNum === imgLength) {
+						var live2dhidden = localStorage.getItem("live2dhidden");
+						if (live2dhidden === "0") {
+							setTimeout(function () {
+								$('#open_live2d').fadeIn(200);
+							}, 1300);
+						} else {
+							setTimeout(function () {
+								$('#landlord').fadeIn(200);
+							}, 1300);
+						}
+						let model = '';
+						if (chooseLive2d === 'histoire') {
+							model = message_Path + "model/histoire/model.json";
+						} else if (chooseLive2d === 'rem') {
+							model = message_Path + "model/rem/model.json";
+						} else if (chooseLive2d === 'aoba') {
+							model = message_Path + "model/aoba/model.json";
+						} else if (chooseLive2d === 'hijiki') {
+							model = message_Path + "model/hijiki/hijiki.model.json";
+						} else if (chooseLive2d === 'tororo') {
+							model = message_Path + "model/tororo/tororo.model.json";
+						}
+						setTimeout(function () {
+							loadlive2d("live2d", model);
+						}, 1000);
+						initLive2d();
+						images = null;
+					}
+				}
+			}
+		});
+	}
+</script>
+  
   
 </div>
 <script>
@@ -465,7 +1074,7 @@
   }
 
   // 链接跳转
-  let newWindow = ''
+  let newWindow = 'true'
   if (newWindow === 'true') {
     let links = document.querySelectorAll('.post-body a')
     links.forEach(item => {
@@ -499,6 +1108,233 @@
 </script>
   </div>
 </body>
+
+<div class="search-mask" id="search_mask" style="display: none;">
+  <div class="search-box">
+    <div class="search-title">
+      <i class="fa fa-search"></i>
+      <div class="input-box">
+        <input id="search" type="text" class="language" data-lan="search" placeholder="搜索">
+      </div>
+      <i id="close" class="fa fa-times-circle"></i>
+    </div>
+    <div class="stat-box">
+      <span id="stat_count">0</span><span class="language" data-lan="stat">条相关条目，使用了</span><span id="stat_times">0</span><span class="language" data-lan="stat-time">毫秒</span>
+      <hr>
+    </div>
+    <div class="result" id="result">
+      
+      <div class="item">
+        <a class="result-title" style="opacity: 0;" href="https://TomNick23.GitHub.io/solution/"" data-c="
+          &lt;p&gt;Microsoft 365开发版E5是微软为开发人员提供的官方活动，申请Office 365开发者计划可以获得为期3个月的免费Microsoft365 E5。其中包含了各种组件，并有25个许可证，当然我们大部分是用不到的。但是其中有一个你或许会感兴趣——office365。&lt;/p&gt;
+&lt;figure data-type=&#34;image&#34; tabindex=&#34;1&#34;&gt;&lt;img src=&#34;https://TomNick23.GitHub.io/post-images/1602777264295.webp&#34; alt=&#34;&#34; loading=&#34;lazy&#34;&gt;&lt;/figure&gt;
+&lt;p&gt;如果你有一个e5账户，你将免费使用包括但不限于以上的所有应用，外加5t的onedrive云盘。此外，25个许可证，可以授权25个子账户，每个许可证包含一个office365加onedrive云盘，意味着~·····😜&lt;/p&gt;
+&lt;figure data-type=&#34;image&#34; tabindex=&#34;2&#34;&gt;&lt;img src=&#34;https://TomNick23.GitHub.io/post-images/1602777273583.gif&#34; alt=&#34;&#34; loading=&#34;lazy&#34;&gt;&lt;/figure&gt;
+&lt;p&gt;所以这棒棒的账户我们要怎么白嫖，呃不，怎么申请呢？&lt;/p&gt;
+&lt;h2 id=&#34;1注册或登录&#34;&gt;1.注册或登录&lt;/h2&gt;
+&lt;p&gt;将此连接复制粘贴到浏览器打开：&lt;/p&gt;
+&lt;p&gt;&lt;code&gt;https:developer.microsoft.com/zh-cn/microsoft-365/dev-program&lt;/code&gt;&lt;/p&gt;
+&lt;figure data-type=&#34;image&#34; tabindex=&#34;3&#34;&gt;&lt;img src=&#34;https://TomNick23.GitHub.io/post-images/1602777295545.webp&#34; alt=&#34;&#34; loading=&#34;lazy&#34;&gt;&lt;/figure&gt;
+&lt;p&gt;点击立即加入&lt;/p&gt;
+&lt;figure data-type=&#34;image&#34; tabindex=&#34;4&#34;&gt;&lt;img src=&#34;https://TomNick23.GitHub.io/post-images/1602777323671.webp&#34; alt=&#34;&#34; loading=&#34;lazy&#34;&gt;&lt;/figure&gt;
+&lt;h2 id=&#34;2完善个人信息&#34;&gt;2.完善个人信息&lt;/h2&gt;
+&lt;figure data-type=&#34;image&#34; tabindex=&#34;5&#34;&gt;&lt;img src=&#34;https://TomNick23.GitHub.io/post-images/1602777342934.webp&#34; alt=&#34;&#34; loading=&#34;lazy&#34;&gt;&lt;/figure&gt;
+&lt;p&gt;自行完善上述信息，“公司”填个学校也行，第一个选项要接受，第二个随意。语言嘛，大家看着办😁&lt;/p&gt;
+&lt;figure data-type=&#34;image&#34; tabindex=&#34;6&#34;&gt;&lt;img src=&#34;https://TomNick23.GitHub.io/post-images/1602777350037.webp&#34; alt=&#34;&#34; loading=&#34;lazy&#34;&gt;&lt;/figure&gt;
+&lt;p&gt;下一步后，按照图示选择，然后点击加入。&lt;/p&gt;
+&lt;figure data-type=&#34;image&#34; tabindex=&#34;7&#34;&gt;&lt;img src=&#34;https://TomNick23.GitHub.io/post-images/1602777358452.webp&#34; alt=&#34;&#34; loading=&#34;lazy&#34;&gt;&lt;/figure&gt;
+&lt;h2 id=&#34;3设置订阅&#34;&gt;3.设置订阅&lt;/h2&gt;
+&lt;figure data-type=&#34;image&#34; tabindex=&#34;8&#34;&gt;&lt;img src=&#34;https://TomNick23.GitHub.io/post-images/1602777481418.webp&#34; alt=&#34;&#34; loading=&#34;lazy&#34;&gt;&lt;/figure&gt;
+&lt;p&gt;点击“设置订阅”，填写设置开发者订阅相关的信息（一定要记得自己设的域名和密码哦）：&lt;/p&gt;
+&lt;figure data-type=&#34;image&#34; tabindex=&#34;9&#34;&gt;&lt;img src=&#34;https://TomNick23.GitHub.io/post-images/1602777504134.webp&#34; alt=&#34;&#34; loading=&#34;lazy&#34;&gt;&lt;/figure&gt;
+&lt;p&gt;然后绑定手机号，接收验证码（本过程中需要一些上网的知识）&lt;/p&gt;
+&lt;figure data-type=&#34;image&#34; tabindex=&#34;10&#34;&gt;&lt;img src=&#34;https://TomNick23.GitHub.io/post-images/1602777690164.webp&#34; alt=&#34;&#34; loading=&#34;lazy&#34;&gt;&lt;/figure&gt;
+&lt;p&gt;验证成功后开始自动设置订阅&lt;/p&gt;
+&lt;figure data-type=&#34;image&#34; tabindex=&#34;11&#34;&gt;&lt;img src=&#34;https://TomNick23.GitHub.io/post-images/1602777707238.webp&#34; alt=&#34;&#34; loading=&#34;lazy&#34;&gt;&lt;/figure&gt;
+&lt;p&gt;订阅成功，如图所示：&lt;/p&gt;
+&lt;figure data-type=&#34;image&#34; tabindex=&#34;12&#34;&gt;&lt;img src=&#34;https://TomNick23.GitHub.io/post-images/1602777717007.webp&#34; alt=&#34;&#34; loading=&#34;lazy&#34;&gt;&lt;/figure&gt;
+&lt;p&gt;可以看到，有三个月的时间。&lt;/p&gt;
+&lt;h2 id=&#34;4分配子账户&#34;&gt;4.分配子账户&lt;/h2&gt;
+&lt;p&gt;打开以下网址：&lt;code&gt;https://portal.office.com/AdminPortal/Home#/homepage&lt;/code&gt;&lt;/p&gt;
+&lt;figure data-type=&#34;image&#34; tabindex=&#34;13&#34;&gt;&lt;img src=&#34;https://TomNick23.GitHub.io/post-images/1602777732889.webp&#34; alt=&#34;&#34; loading=&#34;lazy&#34;&gt;&lt;/figure&gt;
+&lt;p&gt;在这个控制中心可以查看订阅状态或者修改配置。&lt;/p&gt;
+&lt;figure data-type=&#34;image&#34; tabindex=&#34;14&#34;&gt;&lt;img src=&#34;https://TomNick23.GitHub.io/post-images/1602777917866.webp&#34; alt=&#34;&#34; loading=&#34;lazy&#34;&gt;&lt;/figure&gt;
+&lt;p&gt;点击此处的管理可以分配账号，进入新页面点击用户——活跃用户——添加用户即可。而原来注册的账户就是该域的全局管理员账户。&lt;/p&gt;
+&lt;h2 id=&#34;5设置云盘空间&#34;&gt;5.设置云盘空间&lt;/h2&gt;
+&lt;p&gt;默认onedrive容量是1T，但是可以通过设置更改为5T。点击365主页的onedrive图标，在管理中心——所有管理中心——onedrive中找到，更改默认存储为5012GB。&lt;br&gt;
+或者直接打开：&lt;code&gt;https://admin.onedrive.com/?v=StorageSettings&lt;/code&gt; 设置&lt;/p&gt;
+&lt;figure data-type=&#34;image&#34; tabindex=&#34;15&#34;&gt;&lt;img src=&#34;https://TomNick23.GitHub.io/post-images/1602777950820.webp&#34; alt=&#34;&#34; loading=&#34;lazy&#34;&gt;&lt;/figure&gt;
+&lt;p&gt;上述步骤全部完成之后，你就可以至少拥有三个月的e5账户了。想要长期持有？那就得证明你是开发者，保持活跃，否则balabala···那我们到底怎么样才能白嫖，呃不，续订呢？其实网上有很多续订教程，猫咪老师整理了一下，下期发出来~😀&lt;/p&gt;
+&lt;p&gt;关注微信公众号“听雨轩的风”，获取更多资源吧。&lt;br&gt;
+&lt;img src=&#34;https://TomNick23.GitHub.io/post-images/1602778939821.jpg&#34; alt=&#34;&#34; loading=&#34;lazy&#34;&gt;&lt;/p&gt;
+">免费Microsoft 365 开发版 e5 账户教程</a>
+      </div>
+      
+      <div class="item">
+        <a class="result-title" style="opacity: 0;" href="https://TomNick23.GitHub.io/9c6dRKhq0/"" data-c="
+          &lt;p&gt;今天面试时，被问到几个问题，挑选了一个。感觉我答偏题了，而且有点杠的成分。&lt;/p&gt;
+&lt;figure data-type=&#34;image&#34; tabindex=&#34;1&#34;&gt;&lt;img src=&#34;https://TomNick23.GitHub.io/post-images/1597924338014.png&#34; alt=&#34;&#34; loading=&#34;lazy&#34;&gt;&lt;/figure&gt;
+&lt;p&gt;&lt;em&gt;&lt;strong&gt;题目：有哪些类似「西瓜最中间那一口」的美食&lt;/strong&gt;&lt;/em&gt;&lt;/p&gt;
+&lt;p&gt;我的回答：&lt;br&gt;
+喜欢吃西瓜，尤其是最中间那一口，最令人神清气爽；&lt;br&gt;
+喜欢吃石榴，最好剔去所有的籽，只享受甜美的果肉。小小的果肉里却有一颗籽，让果肉如鸡肋一般，食之无味弃之可惜；&lt;br&gt;
+喜欢吃瓜子，真想剥去所有的壳，直接将一口瓜仁吞入肚中。就像躺在家中不劳而获，不必为了不能吃的瓜子壳大费周章。&lt;br&gt;
+这一切美好的体验，最好都省去享受它之前的繁琐步骤。如同罗马城的贵族，不必忍受通往罗马路上的仆仆风尘。一切都来得那么顺利，幸福到这刚刚好，美妙如约而至。&lt;/p&gt;
+&lt;p&gt;**然而，你真的只是喜欢这一口吗？**未必。&lt;br&gt;
+从西瓜边缘开始品尝，才会感觉到最中间那一 口会令人陶醉，若是反过来，总感觉意犹未尽。&lt;br&gt;
+石榴不用吐籽，自然是省事，那为何不直接喝果汁，左右入口即化；&lt;br&gt;
+想嗑瓜子，想要的，是门牙破开瓜子壳那一瞬间的快感，若干瘪的瓜仁直接穿过食道，那一口足以让人嫌腻。&lt;/p&gt;
+&lt;p&gt;饮食过程的享受，无法用灌输的方式替代。人参果吃的太快，一定会错过最美妙的宝藏。&lt;br&gt;
+就像读一本小说，老师直接讲解了书中所有的精彩描述和人物形象，是的，我们领悟精华部分。可是，很难再有耐心读完整本书的欲望了。&lt;br&gt;
+让我们觉得美妙的，不是美妙事物的本身，而是寻找美的过程，是那一瞬间的享受。就像时间给予的惊喜，总是适逢其会，猝不及防。&lt;/p&gt;
+&lt;p&gt;所以，耐心地品尝，哪怕多一口，最中间那一口会显得更甜。&lt;/p&gt;
+&lt;p&gt;第一次回答知乎的问题，不知道风格，也不懂规矩。有些评论区的没事找“杠”，又似“网抑云”的无病呻吟。不过，倒像是我那一瞬间想说的，却不是“猫咪老师”现在滑稽的风格。&lt;br&gt;
+还是想听听你们的答案，或是感悟，或是……沙雕🧐&lt;br&gt;
+你会来吗？&lt;code&gt;听雨轩里有只猫咪老师，等风起，等雨停&lt;/code&gt;&lt;br&gt;
+&lt;img src=&#34;https://TomNick23.GitHub.io/post-images/1597924355159.jpg&#34; alt=&#34;&#34; loading=&#34;lazy&#34;&gt;&lt;/p&gt;
+">今日微风</a>
+      </div>
+      
+      <div class="item">
+        <a class="result-title" style="opacity: 0;" href="https://TomNick23.GitHub.io/about/"" data-c="
+          &lt;blockquote&gt;
+&lt;p&gt;欢迎来到我的小站呀，很高兴遇见你！🤝&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;h2 id=&#34;关于本站&#34;&gt;🏠 关于本站&lt;/h2&gt;
+&lt;pre&gt;&lt;code&gt;    这是猫咪老师的听雨轩呀
+&lt;/code&gt;&lt;/pre&gt;
+&lt;h2 id=&#34;博主是谁&#34;&gt;👨‍💻 博主是谁&lt;/h2&gt;
+&lt;pre&gt;&lt;code&gt;    是一只又馋又懒的猫咪老师，首页头像下有联系方式
+&lt;/code&gt;&lt;/pre&gt;
+&lt;h2 id=&#34;兴趣爱好&#34;&gt;⛹ 兴趣爱好&lt;/h2&gt;
+&lt;pre&gt;&lt;code&gt;    撩你和小鱼干算吗？
+&lt;/code&gt;&lt;/pre&gt;
+&lt;h2 id=&#34;联系我呀&#34;&gt;📬 联系我呀&lt;/h2&gt;
+&lt;pre&gt;&lt;code&gt;   微信公众号：听雨轩的风&lt;/code&gt;&lt;/pre&gt;
+">关于</a>
+      </div>
+      
+    </div>
+    <div class="page">
+      <div id="page_ul"></div>
+    </div>
+  </div>
+</div>
+<script>
+  !function () {
+    let searchMask = document.querySelector('#search_mask');
+    let result = document.querySelector('#result');
+    let items = document.querySelectorAll('.item');
+    let searchBox = document.querySelector('#search');
+    let statCount = document.querySelector('#stat_count');
+    let statTimes = document.querySelector('#stat_times');
+    let pageUl = document.querySelector('#page_ul');
+    let close = document.querySelector('#close');
+    
+    close.addEventListener('click', function() {
+      searchMask.style = 'display: none;'
+    })
+
+    let finds = [];
+    let contents = [];
+    let pageSize = 10;
+    items.forEach(item => {
+      let a = item.querySelector('a');
+      contents.push({
+        title: a.innerText,
+        details: a.dataset.c,
+        link: a.href
+      })
+      item.remove();
+    })
+
+    function insertStr(soure, start, count) {
+      let newStr = soure.substr(start, count);
+      return soure.slice(0, start) + '<em>' + newStr + '</em>' + soure.slice(start + count);
+    }
+
+    pageUl.addEventListener('click', function(event) {
+      let target = event.target;
+      if (target.__proto__ === HTMLSpanElement.prototype) {
+        appendResults(parseInt(target.dataset.i));
+      }
+    })
+
+    function appendResults(index) {
+      let htmlResult = '';
+      let start = index || 0;
+      let end = Math.min(start + pageSize, finds.length);
+      for (let i = start; i < end; i++) {
+        const current = finds[i];
+        let html = current.title;
+        let sum = 0;
+        let positions = current.positions;
+        positions.forEach(position => {
+          html = insertStr(html, position.start + sum, position.count);
+          sum += 9;
+        })
+        htmlResult += `<div class="item"><a class="result-title" href="${current.link}">${html}</a></div>`;
+      }
+      result.innerHTML = htmlResult;
+      pageUl.innerHTML = '';
+      let count = finds.length / pageSize;
+      let lis = '';
+      if (start !== 0) {
+        lis += `<span class="fa fa-angle-left" data-i='${start - 1}'></span>`;
+      }
+      for (let i = 0; i < count; i++) {
+        lis += `<span class='${i === start?'current':''}' data-i='${i}'>${i+1}</span>`;     
+      }
+      if (start+1 < count) {
+        lis += `<span class="fa fa-angle-right" data-i='${start+1}'></span>`;  
+      }
+      pageUl.innerHTML = lis;
+    }
+
+    function search(delay) {
+      let timer = null
+      return function () {
+        clearTimeout(timer)
+        timer = setTimeout(() => {
+          let start = Date.now();
+          let segments = searchBox.value.split(' ').filter(c => c != '');
+          if (segments.length <= 0) {
+            return;
+          }
+          finds = [];
+          let htmlResult = '';
+          contents.forEach(content => {
+            let title = content.title;
+            let positions = [];
+            let find = false;
+            segments.forEach((segment) => {
+              if (content.title.includes(segment)) {
+                find = true;
+                positions.push({
+                  start: content.title.indexOf(segment),
+                  count: segment.length
+                })
+              } else if (content.details.includes(segment)) {
+                find = true;
+              }
+            });
+            if (find) {
+              finds.push({
+                title: content.title,
+                link: content.link,
+                positions
+              });
+            }
+          })
+          appendResults(0);
+          statCount.textContent = finds.length;
+          statTimes.textContent = Date.now() - start;
+        }, delay)
+      }
+    }
+    searchBox.addEventListener('input', search(200));
+  }()
+</script>
 
 <input hidden id="copy" />
 <script>
@@ -669,8 +1505,14 @@
 </script>
 
 
+<script src="/media/js/mouse/love.js"></script>
 
 
+<script src="/media/js/cool.js"></script>
+
+
+
+<script src="https://cdn.jsdelivr.net/gh/lete114/CDN/Sum/sakura.js"></script>
 
 
 </html>
