@@ -2170,10 +2170,10 @@ p > code {
       background-color: #e7f5ff19;
     }
     .gemini .blog-header, .gemini .sidebar-wrapper, .gemini .article-wrapper, .gemini .post, .gemini .page, .gemini .section, .gemini .section-box, .gemini .sidebar-box, .gemini .friends-section {
-      border-radius: 30px;
+      border-radius: 20px;
     }
     .pisces .blog-header, .pisces .sidebar-wrapper, .pisces .article-wrapper, .pisces .section, .pisces .sidebar-box, .pisces .friends-section {
-      border-radius: 30px;
+      border-radius: 20px;
     }
     .site-meta {
       background: #e7f5ff !important;
@@ -2194,7 +2194,7 @@ p > code {
     .mist .site-title i {
       background: #e8590c19;
     }.bg-img img {
-        filter: blur(20px)
+        filter: blur(10px)
       }.box-scale > #landlord {
       transform: scale([0,1]);
     }.box-shadow-wrapper {
