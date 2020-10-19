@@ -2,7 +2,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://TomNick23.GitHub.io</id>
     <title>听雨轩</title>
-    <updated>2020-10-19T04:40:04.605Z</updated>
+    <updated>2020-10-19T08:39:57.624Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
     <link rel="alternate" href="https://TomNick23.GitHub.io"/>
     <link rel="self" href="https://TomNick23.GitHub.io/atom.xml"/>
@@ -10,6 +10,13 @@
     <logo>https://TomNick23.GitHub.io/images/avatar.png</logo>
     <icon>https://TomNick23.GitHub.io/favicon.ico</icon>
     <rights>All rights reserved 2020, 听雨轩</rights>
+    <entry>
+        <title type="html"><![CDATA[分享一款好用的阅读软件]]></title>
+        <id>https://TomNick23.GitHub.io/2008252/</id>
+        <link href="https://TomNick23.GitHub.io/2008252/">
+        </link>
+        <updated>2020-10-19T08:07:14.000Z</updated>
+    </entry>
     <entry>
         <title type="html"><![CDATA[免费Microsoft 365 开发版 e5 续订教程]]></title>
         <id>https://TomNick23.GitHub.io/200824/</id>
