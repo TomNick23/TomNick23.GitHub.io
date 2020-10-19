@@ -2078,7 +2078,7 @@ p > code {
       border-bottom-color: #212529;
     }
     .archive-timeline-box::after, .tag-timeline-wrapper::after {
-      background: #ff922b4c;
+      background: #ff922b19;
     }h1, h2, h3, h4, h5, h6 {
       color: #e8590c;
     }
@@ -2125,11 +2125,11 @@ p > code {
       }.nav-item a:hover {
         color: #ffec99;
       }.nav-item-active {
-      background: #fff9db4c;
+      background: #fff9db19;
     }
 
     .nav-item:hover {
-      background: #fff9db4c;
+      background: #fff9db19;
       color: rgba(0, 0, 0, 0.98);
     }.site-author-image {
       border-radius: 50%;
@@ -2165,9 +2165,9 @@ p > code {
       color: #fc6423;
       border-bottom-color: #fc6423;
     }.reward-btn-text {
-        background-color: #fcc4194c !important;
+        background-color: #fcc41919 !important;
       }.bg-color {
-      background-color: #e7f5ff4c;
+      background-color: #e7f5ff19;
     }
     .gemini .blog-header, .gemini .sidebar-wrapper, .gemini .article-wrapper, .gemini .post, .gemini .page, .gemini .section, .gemini .section-box, .gemini .sidebar-box, .gemini .friends-section {
       border-radius: 30px;
@@ -2182,7 +2182,7 @@ p > code {
       background: #e7f5ff;
     }
     .brand {
-      background: #e7f5ff4c;
+      background: #e7f5ff19;
     }
     
       .brand {
@@ -2192,9 +2192,9 @@ p > code {
       color: #e8590c !important;
     }
     .mist .site-title i {
-      background: #e8590c4c;
+      background: #e8590c19;
     }.bg-img img {
-        filter: blur(50px)
+        filter: blur(20px)
       }.box-scale > #landlord {
       transform: scale([0,1]);
     }.box-shadow-wrapper {
