@@ -8,7 +8,7 @@
 <meta name="keywords" content="Gridea静态个人博客">
 <meta name="description" content="念念不忘，必有回响">
 <meta name="theme-color" content="#e7f5ff">
-<title>听雨轩</title>
+<title>一款既好看又好吃的Dock栏  | 听雨轩</title>
 <link rel="shortcut icon" href="/favicon.ico?v=1603126625586">
 <link rel="stylesheet" href="/media/css/gemini.css">
 <link rel="stylesheet" href="/media/fonts/font-awesome.css">
@@ -38,6 +38,8 @@
 
 
 
+  <meta name="description" content="一款既好看又好吃的Dock栏 " />
+  <meta name="keywords" content="软件,娱乐,工具" />
 </head>
 
 <body>
@@ -152,10 +154,26 @@
   <div class="main-continer">
     
     <div
-      class="section-layout  gemini">
+      class="section-layout gemini ">
       <div class="section-layout-wrapper">
-        <div id="sidebarMeta" class="sidebar">
-    
+        
+
+<div class="sidebar">
+  
+    <div class="sidebar-box box-shadow-wrapper bg-color right-motion" id="sidebar">
+      
+        <div class="post-list-sidebar">
+          <div class="sidebar-title">
+            <span id="tocSideBar" class="sidebar-title-item sidebar-title-active language" data-lan="index">文章目录</span>
+            <span id="metaSideBar" class="sidebar-title-item language" data-lan="preview">站点概览</span>
+          </div>
+        </div>
+      
+      <div class="sidebar-body gemini" id="sidebar_body">
+        
+          
+            <div class="post-side-meta" id="post_side_meta">
+              
 <div class="sidebar-wrapper box-shadow-wrapper bg-color">
   <div class="sidebar-item">
     <img class="site-author-image right-motion" src="/images/avatar.png"/>
@@ -235,106 +253,499 @@
 
 
 </div>
+            </div>
+            <div class="post-toc sidebar-body-active" id="post_toc" style="opacity: 1;">
+              <div class="toc-box right-motion">
+  <div class="toc-wrapper auto-number auto"
+    id="toc_wrapper">
+    <ul class="markdownIt-TOC">
+<li>
+<ul>
+<li><a href="#1%E5%A4%A7%E4%BD%93%E4%B8%8A%E6%A8%A1%E4%BB%BF%E4%BA%86macos%E7%9A%84%E8%AE%BE%E8%AE%A1">1.大体上模仿了MacOS的设计</a></li>
+<li><a href="#2%E4%B8%BB%E9%A2%98%E5%92%8C%E5%9B%BE%E6%A0%87%E9%83%BD%E6%94%AF%E6%8C%81%E5%AE%9A%E5%88%B6">2.主题和图标都支持定制</a></li>
+<li><a href="#3%E6%8F%90%E4%BE%9B%E4%BA%86%E4%B8%B0%E5%AF%8C%E7%9A%84%E8%AE%BE%E7%BD%AE%E9%A1%B9">3.提供了丰富的设置项</a></li>
+<li><a href="#4launchpad%E5%8A%9F%E8%83%BD">4.LaunchPad功能</a></li>
+<li><a href="#5%E8%87%AA%E5%B8%A6%E5%B0%8F%E5%B7%A5%E5%85%B7">5.自带小工具</a></li>
+<li><a href="#6%E7%BC%BA%E7%82%B9">6.缺点</a><br>
+*
+<ul>
+<li><a href="#1-%E6%9A%82%E6%97%B6%E4%B8%8D%E6%94%AF%E6%8C%81%E7%AA%97%E5%8F%A3%E6%94%BE%E5%A4%A7%E7%BC%A9%E5%B0%8F%E7%9A%84%E7%89%B9%E6%95%88">1).  暂时不支持窗口放大缩小的特效</a></li>
+<li><a href="#2%E4%B8%8E%E5%85%B6%E4%BB%96%E8%BD%AF%E4%BB%B6%E5%85%BC%E5%AE%B9%E6%80%A7">2).与其他软件兼容性</a></li>
+<li><a href="#3%E5%B0%BD%E9%87%8F%E4%B8%8D%E8%A6%81%E4%BD%BF%E7%94%A8%E5%A4%AA%E5%A4%A7%E7%9A%84%E5%A3%81%E7%BA%B8">3).尽量不要使用太大的壁纸</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+
+  </div>
 </div>
+
 <script>
-  let sidebarMeta = document.querySelector('#sidebarMeta');
-  let scheme = 'gemini';
-  let sidebarWrapper = document.querySelector('.sidebar-wrapper');
-  if (sidebarMeta && (scheme === 'pisces' || scheme === 'gemini')) {
-    document.addEventListener('scroll', function(e) {
-      if (document.scrollingElement.scrollTop > parseInt(sidebarMeta.style.marginTop) + 10) {
-        sidebarWrapper.classList.add('home-sidebar-fixed')
-      } else {
-        sidebarWrapper.classList.remove('home-sidebar-fixed')
+
+  let lastTop = 0, lList = [], hList = [], postBody, lastIndex = -1;
+  let active = 'active-show', activeClass = 'active-current';
+  let tocWrapper = document.querySelector('#toc_wrapper');
+  let tocContent = tocWrapper.children[0];
+  let autoNumber = tocWrapper && tocWrapper.classList.contains('auto-number');
+
+  function addTocNumber(elem, deep) {
+    if (!elem) {
+      return;
+    }
+    let prop = elem.__proto__;
+
+    if (prop === HTMLUListElement.prototype) {
+      for (let i = 0; i < elem.children.length; i++) {
+        addTocNumber(elem.children[i], deep + (i + 1) + '.');
       }
+    } else if (prop === HTMLLIElement.prototype) {
+      // 保存li元素
+      if (elem.children[0] && elem.children[0].__proto__ === HTMLAnchorElement.prototype) {
+        lList.push(elem);
+      }
+      for (let i = 0; i < elem.children.length; i++) {
+        let cur = elem.children[i];
+        if (cur.__proto__ === HTMLAnchorElement.prototype) {
+          if (autoNumber) {
+            cur.text = deep + ' ' + cur.text;
+          }
+        } else if (cur.__proto__ === HTMLUListElement.prototype) {
+          addTocNumber(cur, deep);
+        }
+      }
+    }
+  }
+
+  function removeParentActiveClass() {
+    let parents = tocContent.querySelectorAll('.' + active)
+    parents.forEach(function (elem) {
+      elem.classList.remove(active);
     });
   }
-  </script>
-        <div class="section-box tag-line box-shadow-wrapper">
-          <section class="section tags-section posts-expand bg-color">
-            <div class="padding-wrapper">
-  <div class="tag-timeline-box">
-    <div class="tag-timeline-wrapper">
-      <div class="tag-timeline-title">
-        <h2>
-          工具
-          <small class="language" data-lan="tag">标签</small>
-        </h2>
+
+  function addActiveClass(index) {
+    if (index >= 0 && index < hList.length) {
+      lList[index].classList.add(activeClass);
+    }
+  }
+
+  function removeActiveClass(index) {
+    if (index >= 0 && index < hList.length) {
+      lList[index].classList.remove(activeClass);
+    }
+  }
+
+  function addActiveLiElemment(elem, parent) {
+    if (!elem || elem === parent) {
+      return;
+    } else {
+      if (elem.__proto__ === HTMLLIElement.prototype) {
+        elem.classList.add(active);
+      }
+      addActiveLiElemment(elem.parentElement, parent);
+    }
+  }
+
+  function showToc() {
+    if (tocWrapper) {
+      postBody = document.querySelector('#post_body');
+      for (let i = 0; i < postBody.children.length; i++) {
+        if (postBody.children[i].__proto__ === HTMLHeadingElement.prototype) {
+          hList.push(postBody.children[i]);
+        }
+      }
+      if (tocWrapper.classList.contains('compress')) {
+        tocContent.classList.add('closed');
+      } else if (tocWrapper.classList.contains('no_compress')) {
+        tocContent.classList.add('expanded');
+      } else {
+        if (hList.length > 10) {
+          active = 'active-hidden'
+          tocContent.classList.add('closed');
+        } else {
+          tocContent.classList.add('expanded');
+        }
+      }
+    }
+  }
+
+  (function () {
+    // 处理不是从#一级标题开始目录
+    if (tocContent.children.length === 1 && tocContent.children[0].__proto__ === HTMLLIElement.prototype) {
+      let con = tocContent.children[0].children[0];
+      tocContent.innerHTML = con.innerHTML;
+    }
+    let markdownItTOC = document.querySelector('.markdownIt-TOC');
+    let innerHeight = window.innerHeight;
+    markdownItTOC.style = `max-height: ${innerHeight - 80 > 0 ? innerHeight - 80 : innerHeight}px`
+    addTocNumber(tocContent, '');
+  })();
+
+  document.addEventListener('scroll', function (e) {
+    if (lList.length <= 0) {
+      return;
+    }
+    let scrollTop = document.scrollingElement.scrollTop + 10;
+    let dir;
+
+    if (lastTop - scrollTop > 0) {
+      dir = 'up';
+    } else {
+      dir = 'down';
+    }
+
+    lastTop = scrollTop;
+    if (scrollTop <= 0) {
+      if (lastIndex >= 0 && lastIndex < hList.length) {
+        lList[lastIndex].classList.remove(activeClass);
+      }
+      return;
+    }
+
+    let current = 0, hasFind = false;
+    for (let i = 0; i < hList.length; i++) {
+      if (hList[i].offsetTop > scrollTop) {
+        current = i;
+        hasFind = true;
+        break;
+      }
+    }
+    if (!hasFind && scrollTop > lList[lList.length - 1].offsetTop) {
+      current = hList.length - 1;
+    } else {
+      current--;
+    }
+    if (dir === 'down') {
+      if (current > lastIndex) {
+        addActiveClass(current);
+        removeActiveClass(lastIndex)
+        lastIndex = current;
+        removeParentActiveClass();
+        lList[current] && addActiveLiElemment(lList[current].parentElement, tocContent);
+      }
+    } else {
+      if (current < lastIndex) {
+        addActiveClass(current);
+        removeActiveClass(lastIndex);
+        lastIndex = current;
+        removeParentActiveClass();
+        lList[current] && addActiveLiElemment(lList[current].parentElement, tocContent);
+      }
+    }
+  });
+
+
+  window.addEventListener('load', function () {
+    showToc();
+    document.querySelector('#sidebar').style = 'display: block;';
+    tocWrapper.classList.add('toc-active');
+    setTimeout(function () {
+      if ("createEvent" in document) {
+        let evt = document.createEvent("HTMLEvents");
+        evt.initEvent("scroll", false, true);
+        document.dispatchEvent(evt);
+      }
+      else {
+        document.fireEvent("scroll");
+      }
+    }, 500)
+  })
+
+</script>
+            </div>
+          
+        
       </div>
+    </div>
+  
+</div>
+<script>
+  const SIDEBAR_TITLE_ACTIVE = 'sidebar-title-active';
+  const SIDEBAR_BODY_ACTIVE = 'sidebar-body-active';
+  const SLIDE_UP_IN = 'slide-up-in';
+
+  let sidebar = document.querySelector('#sidebar'),
+  tocSideBar = document.querySelector('#tocSideBar'),
+  metaSideBar = document.querySelector('#metaSideBar'),
+  postToc = document.querySelector('#post_toc'),
+  postSiteMeta = document.querySelector('#post_side_meta'),
+  sidebarTitle = document.querySelector('.sidebar-title'),
+  sidebarBody = document.querySelector('#sidebar_body');
+
+  tocSideBar && tocSideBar.addEventListener('click', (e) => {
+    toggleSidebar(e);
+  });
+
+  metaSideBar && metaSideBar.addEventListener('click', (e) => {
+    toggleSidebar(e);
+  });
+
+  function toggleSidebar(e) {
+    let currentTitle = document.querySelector("."+SIDEBAR_TITLE_ACTIVE);
+    if (currentTitle == e.srcElement) {
+      return ;
+    }
+    let current, showElement, hideElement;
+    if (e.srcElement == metaSideBar) {
+      showElement = postSiteMeta;
+      hideElement = postToc;
+    } else if (e.srcElement == tocSideBar){
+      showElement = postToc;
+      hideElement = postSiteMeta;
+    }
+    currentTitle.classList.remove(SIDEBAR_TITLE_ACTIVE);
+    e.srcElement.classList.add(SIDEBAR_TITLE_ACTIVE);
+
+    window.Velocity(hideElement, 'stop');
+    window.Velocity(hideElement, 'transition.slideUpOut', {
+      display: 'none',
+      duration: 200,
+      complete: function () {
+        window.Velocity(showElement, 'transition.slideDownIn', {
+          duration: 200
+        });
+      }
+    })
+    hideElement.classList.remove(SIDEBAR_BODY_ACTIVE);
+    showElement.classList.add(SIDEBAR_BODY_ACTIVE);
+  }
+
+  postToc && postToc.addEventListener('transitionend', function() {
+    this.classList.remove(SLIDE_UP_IN);
+  });
+
+  if (sidebarBody) {
+    if (sidebarBody.classList.contains('pisces') || sidebarBody.classList.contains('gemini')) {
+      let hasFix = false;
+      let scrollEl = document.querySelector('.main-continer');
+      let limitTop = document.querySelector('#nav_ul').children.length * 42 + 162;
+      window.addEventListener('scroll', function(e) {
+        if (document.scrollingElement.scrollTop >= limitTop) {
+          if (!hasFix) {
+            sidebar.classList.add('sidebar-fixed');
+            hasFix = true;
+          }
+        } else {
+          if (hasFix) {
+            sidebar.classList.remove('sidebar-fixed');
+            hasFix = false;
+          }
+        }
+      });
+    }
+  }
+  
+</script>
+        <div class="section-box box-shadow-wrapper">
+          <div class="section bg-color post post-page">
+            <section class="post-header">
+  <h1 class="post-title">
+    <a class="post-title-link" href="https://TomNick23.GitHub.io/2008251/">
+      一款既好看又好吃的Dock栏 
+    </a>
+  </h1>
+  <div class="post-meta">
+    
+    <span class="meta-item pc-show">
+      <i class="fa fa-calendar-o"></i>
+      <span class="language" data-lan="publish">发布于</span>
+      <span class="publish-time" data-t="2020-10-19 17:46:37">2020-10-19</span>
+      <span class="post-meta-divider pc-show">|</span>
+    </span>
+    
+    <span class="meta-item">
+      <i class="fa fa-folder-o"></i>
+      <span class="pc-show language" data-lan="category-in">分类于</span>
+      
+      
+      <a href="https://TomNick23.GitHub.io/oygtkZ3Ol/">
+        <span>软件</span>
+      </a>、
       
       
       
+      <a href="https://TomNick23.GitHub.io/IrdDnKEf1O/">
+        <span>娱乐</span>
+      </a>、
       
       
       
-      
-      <a href="https://TomNick23.GitHub.io/2008251/">
-        <div class="motion-warpper">
-          <div class="tag-post-node">
-            <h1>
-              10-19
-              <small>一款既好看又好吃的Dock栏 </small>
-            </h1>
-          </div>
-        </div>
+      <a href="https://TomNick23.GitHub.io/4-3dHnVDF8/">
+        <span>工具</span>
       </a>
       
       
+    </span>
+    <span class="post-meta-divider">|</span>
+    
+    <span class="meta-item">
+      <i class="fa fa-clock-o"></i>
+      <span>3<span class="language" data-lan="minute">分钟</span></span>
+    </span>
+    <span class="meta-item">
+      <span class="post-meta-divider">|</span>
+      <i class="fa fa-file-word-o"></i>
+      <span>814<span class="pc-show language" data-lan="words">字数</span></span>
+    </span>
+    
+    
+    
+    <span id="/2008251/" data-flag-title="一款既好看又好吃的Dock栏 " class="meta-item pc-show leancloud_visitors">
+      <span class="post-meta-divider">|</span>
+      <i class="fa fa-eye"></i>
+      <span><span class="language" data-lan="view">浏览量</span>：<span class="leancloud-visitors-count"></span></span>
+    </span>
+    
+  </div>
+</section>
+            <div class="post-body next-md-body" id="post_body">
+              <p>  很多人喜欢MacOS的Dock栏设计，方便且美观。Windows上也有很多模仿的软件，比如RocketDock，MyDock等等。用户使用Dock栏的需求也不同，用的是想要模仿MacOS的体验，有的想要作为快速启动栏，有的只是想要桌面整洁......今天猫咪老师推荐一款自己最喜欢的dock栏——<strong>BitDock</strong>。</p>
+<h2 id="1大体上模仿了macos的设计">1.大体上模仿了MacOS的设计</h2>
+<p>  并带有Launchpad（这个功能有些人喜欢，有些人不屑，各取所需）。可以拖拽或者右键添加系统程序/应用程序/文件夹/文件。支持添加分隔符，添加菜单，菜单有网格菜单和列表菜单两种形态，可以任意切换；</p>
+<img src="file://F:/11938/Documents/Gridea/post-images/1603126163571.webp" width="50%">
+<h2 id="2主题和图标都支持定制">2.主题和图标都支持定制</h2>
+<p>  另外开发者也提供了很多图标包（还有动态图标），我们可以根据自己的审美选择想用的图标，也可以导入JPG/GIF等常用图片格式为图标包；</p>
+<img src="file://F:/11938/Documents/Gridea/post-images/1603126243528.webp" width="50%">
+<img src="file://F:/11938/Documents/Gridea/post-images/1603126295004.webp" width="50%">
+<h2 id="3提供了丰富的设置项">3.提供了丰富的设置项</h2>
+<p>  包括位置，间隔，响应时间，预览图片，自动隐藏，甚至还有快捷操作的热键功能。</p>
+<img src="file://F:/11938/Documents/Gridea/post-images/1603126337176.webp" width="50%">
+<img src="file://F:/11938/Documents/Gridea/post-images/1603126370156.webp" width="50%">
+<img src="file://F:/11938/Documents/Gridea/post-images/1603126378648.webp" width="50%">
+<img src="file://F:/11938/Documents/Gridea/post-images/1603126383214.webp" width="50%">
+<h2 id="4launchpad功能">4.LaunchPad功能</h2>
+<p>  自带LaunchPad功能，且形态支持定制。</p>
+<img src="file://F:/11938/Documents/Gridea/post-images/1603126435924.webp" width="50%">
+<h2 id="5自带小工具">5.自带小工具</h2>
+<p>  取色器、截图、护眼工具、搜索、时间日期，可以到应用中心里面添加功能。</p>
+<img src="file://F:/11938/Documents/Gridea/post-images/1603126453597.webp" width="50%">
+<p>以上的操作需要摸索，开发者做了教程，猫咪老师在文章末分享出来。</p>
+<h2 id="6缺点">6.缺点</h2>
+<p>优点有很多，大家可以慢慢探索，还有一些需要注意的地方：</p>
+<h4 id="1-暂时不支持窗口放大缩小的特效">1).  暂时不支持窗口放大缩小的特效</h4>
+<p>  猫咪老师等粉丝向开发者提过建议，开发者称“实现该功能需要监控窗口状态，容易造成软件崩溃，不稳定”。这一点可以参考曾经经常崩溃的“mydock”，据说现在用c++重写软件之后已经减少这种状况。猫咪老师没有试验，大家有兴趣可以去试试看；</p>
+<h4 id="2与其他软件兼容性">2).与其他软件兼容性</h4>
+<p>  Windows大部分dock栏相当于前置的窗口，与“火萤”这类动态壁纸软件兼容性不好，会出现点击dock栏，壁纸就停止播放的情况，但是日常使用的话影响不大；</p>
+<h4 id="3尽量不要使用太大的壁纸">3).尽量不要使用太大的壁纸</h4>
+<p>  20M以下的最佳，如果超过100m，大概率无法使用该软件。</p>
+<hr>
+<p>v1.9.3.1测试版<br>
+1.修复Dock设置隐藏后，快捷键LaunchPad不显示的问题<br>
+2.修复部分快捷键不能清空问题<br>
+3.修复回收站图标设置失败问题<br>
+4.优化新运行图标插入位置<br>
+5.优化Dock皮肤绑定分隔符图标<br>
+6.优化图标启动方式切换<br>
+7.优化刷新工作区频率<br>
+8.优化任务栏透明<br>
+9.优化托盘图标收起问题<br>
+10.修复其他已知BUG若干</p>
+<p>官方网址：<br>
+<a href="http://www.bitdock.cn/#home">http://www.bitdock.cn/#home</a></p>
+<p>官方教程：<br>
+<a href="https://www.bilibili.com/video/BV1eE411A7ht">https://www.bilibili.com/video/BV1eE411A7ht</a></p>
+<p>如果想快速下载，或者想获取更多图标包。<br>
+微信搜索或扫描下方二维码，关注公众号“听雨轩的风”。<br>
+回复 <em><strong>2008252</strong></em>，获取bitdock和更多精美图标包下载地址。<br>
+<img src="file://F:/11938/Documents/Gridea/post-images/1603126547586.jpg" width="30%"></p>
+
+            </div>
+            
+              <div class="reward-btn">
+                <div class="reward-btn-text">赞赏</div>
+              </div>
+            
+            
+              <div class="post-footer">
+  <ul class="post-copyright">
+    <li class="post-copyright-author">
+      <strong class="language" data-lan="author">本文作者：</strong>
+      猫咪老师
+    </li>
+    <li class="post-copyright-link">
+      <strong class="language" data-lan="link">本文链接：</strong>
+      <a href="https://TomNick23.GitHub.io/2008251/" title="一款既好看又好吃的Dock栏 ">https://TomNick23.GitHub.io/2008251/</a>
+    </li>
+    <li class="post-copyright-license">
+      <strong class="language" data-lan="copyright">版权声明： </strong>
+      本博客所有文章除特别声明外，均采用<a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" rel="noopener" target="_blank"><i class="fa fa-fw fa-creative-commons"></i> BY-NC-SA</a> 许可协议。转载请注明出处！
+    </li>
+  </ul>
+  <div class="tags">
+    
+      <a href="https://TomNick23.GitHub.io/oygtkZ3Ol/"># 软件</a>
+    
+      <a href="https://TomNick23.GitHub.io/IrdDnKEf1O/"># 娱乐</a>
+    
+      <a href="https://TomNick23.GitHub.io/4-3dHnVDF8/"># 工具</a>
+    
+  </div>
+  <div class="nav">
+    <div class="nav-prev">
       
+    </div>
+    <div class="nav-next">
       
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      <a href="https://TomNick23.GitHub.io/200824/">
-        <div class="motion-warpper">
-          <div class="tag-post-node">
-            <h1>
-              10-19
-              <small>免费Microsoft 365 开发版 e5 续订教程</small>
-            </h1>
-          </div>
-        </div>
-      </a>
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      <a href="https://TomNick23.GitHub.io/200823/">
-        <div class="motion-warpper">
-          <div class="tag-post-node">
-            <h1>
-              10-19
-              <small>免费Microsoft 365 开发版 e5 账户教程</small>
-            </h1>
-          </div>
-        </div>
-      </a>
-      
-      
-      
-      
-      
-      
+        <a class="nav-pc-next" title="分享一款好用的阅读软件" href="https://TomNick23.GitHub.io/2008252/">分享一款好用的阅读软件</a>
+        <a class="nav-mobile-next" title="分享一款好用的阅读软件" href="https://TomNick23.GitHub.io/2008252/">下一篇</a>
+        <i class="fa fa-chevron-right"></i>
       
     </div>
   </div>
 </div>
-          </section>
+            
+            
+  <script src="https://cdn.jsdelivr.net/npm/valine@1.4.14/dist/Valine.min.js"></script>
+<div id="vcomments" style="padding: 10px 0px 0px 0px"></div>
+
+<style>
+  .v .veditor {
+    min-height: 10rem;
+    background-image: url('');
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: right;
+    background-color: rgba(255, 255, 255, 0);
+    resize: none;
+  }
+
+  .v .vwrap {
+    border: 1px solid #000 !important;
+  }
+
+  .v .vbtn {
+    padding: .4rem 1.2rem !important;
+    border-color: #fff !important;
+    background-color: #49b1f5 !important;
+    color: #fff !important;
+    font-size: .7rem !important;
+  }
+
+  .v .vcards .vcard .vh .vmeta .vat {
+    padding: 0 .8rem !important;
+    border: 1px solid #00c4b6 !important;
+    border-radius: 5px !important;
+    color: #00c4b6 !important;
+  }
+</style>
+<script>
+  new Valine({
+    el: '#vcomments',
+    appId: '',
+    appKey: '',
+    avatar: 'retro',
+    placeholder: '',
+    pageSize: '',
+    lang: 'zh-cn',
+    enableQQ: 'true' === 'false',
+    visitor: 'true' === 'true',
+    highlight: 'true' === 'true',
+    avatarForce: 'true' === 'true',
+  });
+</script>
+
+          </div>
         </div>
       </div>
     </div>
@@ -1110,6 +1521,259 @@
   }
 
 </script>
+    <div class="light-box" id="light_box"></div>
+<script>
+  let imgs = document.querySelectorAll('.post-body img');
+  let lightBox = document.querySelector('#light_box');
+  lightBox.addEventListener('mousedown', (e) => {
+    e.preventDefault()
+  })
+  lightBox.addEventListener('mousewheel', (e) => {
+    e.preventDefault()
+  })
+  let width = window.innerWidth * 0.8;
+  lightBox.onclick = () => {
+    let img = lightBox.querySelector('img');
+    lightBox.style = '';
+    img && img.remove();
+  }
+  imgs.forEach(item => {
+    item.onclick = function (e) {
+      let lightImg = document.createElement('img');
+      lightImg.src = this.src;
+      lightBox.style = `height: 100%; opacity: 1; background-color: rgba(0, 0, 0, 0.5);cursor: zoom-out;`;
+      lightImg.style = `width: ${width}px;border-radius: 2px;`;
+      lightImg.onclick = function () {
+        lightBox.style = '';
+        this.remove();
+      }
+      lightBox.append(lightImg);
+    }
+  })
+</script>
+    <div class="reward-mask" style="display: none;">
+  <div class="reward-relative">
+    <span class="close" aria-hidden="true">x</span>
+    <div class="reward-body">
+      <h2>感谢您的支持，我会继续努力的!</h2>
+      <div class="reward-img-box">
+        <div style="position: relative; width: 140px; height: 140px;">
+          
+          
+          
+            <img id="wx" class="reward-img" src="\media\images\custom-wxImg.png" alt="赞赏码">
+          
+        </div>
+      </div>
+      <p class="reward-word">猫咪老师可以吃到小鱼干吗？</p>
+      <p class="reward-tip">注意你的小钱包哦</p>
+    </div>
+    <div class="bottom">
+      
+      
+      <div id="wxBtn" class="pay-text">
+        微信支付
+      </div>
+      
+    </div>
+  </div>
+</div>
+<style>
+  .reward-mask {
+    position: fixed;
+    z-index: 99999;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background-color: #00000054;
+  }
+
+  .reward-relative {
+    position: relative;
+    width: 480px;
+    text-align: center;
+    margin: 0 auto;
+    border-radius: 5px;
+    background-color: #fff;
+    top: 50%;
+    margin-top: -205px;
+  }
+
+  .reward-relative .close {
+    position: absolute;
+    right: 10px;
+    font-weight: normal;
+    font-size: 16px;
+    color: #929292;
+  }
+
+  .reward-body {
+    padding: 40px 20px 20px;
+  }
+
+  .bottom {
+    display: flex;
+  }
+
+  .reward-btn {
+    text-align: center;
+  }
+
+  .reward-btn-text {
+    display: inline-block;
+    cursor: pointer;
+    width: 60px;
+    height: 60px;
+    line-height: 60px;
+    border-radius: 50%;
+    background-color: #ff9734;
+    color: #FFF;
+    margin-top: 20px;
+  }
+
+  .pay-text {
+    margin-top: 10px;
+    padding: 10px;
+    flex: 1;
+    transition: all .2s linear;
+  }
+
+  .pay-text:hover {
+    background-color: #a5a5a536;
+  }
+
+  .reward-body h2 {
+    padding-top: 10px;
+    text-align: center;
+    color: #a3a3a3;
+    font-size: 16px;
+    font-weight: normal;
+    margin: 0 0 20px;
+  }
+
+  .reward-body h2:after,
+  .reward-body h2:before {
+    font-family: Arial, Helvetica, sans-serif;
+    background: 0 0;
+    width: 0;
+    height: 0;
+    font-style: normal;
+    color: #eee;
+    font-size: 80px;
+    position: absolute;
+    top: 20px;
+  }
+
+  .reward-body h2:before {
+    content: '\201c';
+    left: 50px;
+  }
+
+  .reward-body h2:after {
+    content: '\201d';
+    right: 80px;
+  }
+
+  .reward-img-box {
+    display: inline-block;
+    padding: 10px;
+    border: 6px solid #ea5f00;
+    margin: 0 auto;
+    border-radius: 3px;
+    position: relative;
+  }
+
+  .reward-img {
+    position: absolute;
+    left: 0px;
+    top: 0px;
+    width: 100%;
+    height: 100%;
+  }
+
+  @media (max-width: 767px) {
+    .reward-relative {
+      height: 100%;
+      top: 0px;
+      margin-top: 0;
+      width: auto;
+    }
+
+    .reward-relative .bottom {
+      flex-direction: column;
+    }
+
+    .reward-relative .pay-text {
+      width: 80%;
+      margin: 5px auto;
+      border: 1px solid silver;
+      padding: 6px;
+      border-radius: 4px;
+    }
+
+    .reward-body h2:after {
+      right: 40px;
+    }
+
+    .reward-body h2:after,
+    .reward-body h2:before {
+      font-size: 60px;
+    }
+
+    .reward-body h2:before {
+      left: 20px;
+    }
+  }
+</style>
+<script>
+  !function () {
+    var mask = document.querySelector('.reward-mask');
+    let close = document.querySelector('.reward-relative .close');
+    let rewardBtn = document.querySelector('.reward-btn');
+
+    let zfb = document.querySelector('#zfb'),
+      wx = document.querySelector('#wx'),
+      zfbBtn = document.querySelector('#zfbBtn'),
+      wxBtn = document.querySelector('#wxBtn');
+
+    if (zfbBtn && wxBtn) {
+      zfbBtn.addEventListener('click', () => {
+        window.Velocity(zfb, 'transition.slideLeftIn', {
+          duration: 400
+        });
+        window.Velocity(wx, 'transition.slideRightOut', {
+          display: 'none',
+          duration: 400
+        });
+      });
+
+      wxBtn.addEventListener('click', () => {
+        window.Velocity(wx, 'transition.slideRightIn', {
+          duration: 400
+        });
+        window.Velocity(zfb, 'transition.slideLeftOut', {
+          display: 'none',
+          duration: 400
+        });
+      });
+    }
+
+    rewardBtn.addEventListener('click', (e) => {
+      window.Velocity(mask, 'transition.slideDownIn', {
+        duration: 400
+      })
+    });
+
+    close.addEventListener('click', (e) => {
+      e.preventDefault();
+      window.Velocity(mask, 'transition.slideUpOut', {
+        duration: 400
+      })
+    })
+  }()
+</script>
+
   </div>
 </body>
 
@@ -1669,6 +2333,5 @@ https://www.daniao.org/8879.html&lt;/p&gt;
 
 
 <script src="https://cdn.jsdelivr.net/gh/lete114/CDN/Sum/sakura.js"></script>
-
 
 </html>
