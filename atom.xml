@@ -2,7 +2,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://TomNick23.GitHub.io</id>
     <title>听雨轩</title>
-    <updated>2020-10-22T18:23:45.473Z</updated>
+    <updated>2020-10-24T17:12:04.297Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
     <link rel="alternate" href="https://TomNick23.GitHub.io"/>
     <link rel="self" href="https://TomNick23.GitHub.io/atom.xml"/>
@@ -10,6 +10,53 @@
     <logo>https://TomNick23.GitHub.io/images/avatar.png</logo>
     <icon>https://TomNick23.GitHub.io/favicon.ico</icon>
     <rights>All rights reserved 2020, 听雨轩</rights>
+    <entry>
+        <title type="html"><![CDATA[1024的礼物？]]></title>
+        <id>https://TomNick23.GitHub.io/JetBrains/</id>
+        <link href="https://TomNick23.GitHub.io/JetBrains/">
+        </link>
+        <updated>2020-10-24T16:59:36.000Z</updated>
+        <summary type="html"><![CDATA[<p>  其实猫咪老师是第一次听到1024程序猿节的概念，可能因为我还不是程序猿吧（卑微小白内心独白）。</p>
+<p>  不过我想我的号暂时不会有程序猿的受众的，值此特殊的日子里，今天推送点啥呢？想想还是为初学者推荐一下开发环境最好不过了（PS:我没有劝人入坑哈）。</p>
+<p>  今天推荐的这款是JetBrains2020.1.2全系列产品的激活和汉化补丁。学习编程的朋友们应该都对这个产品有所耳闻。JetBrains捷克软件开发公司出品的编程语言集成开发环境，专为软件开发软件编程人员制作的各类应用工具箱，如:</p>
+<font face="黑体"  size=3>
+<p>  PHP集成开发工具PHPStorm；<br>
+  Java整合开发工具IntelliJ IDEA；<br>
+  Python集成开发工具PyCharm；<br>
+  HTML/CSS/JS开发工具WebStorm；<br>
+  专为Ruby和Rails开发者准备的IDE工具RubyMine；<br>
+  Objective-C的集成开发环境AppCode；<br>
+  Visual Studio .NET集成开发环境的插件ReSharper；<br>
+  数据库管理工具DataGrip；<br>
+  C/C++ 开发神器 CLion；<br>
+  C#编辑器Rider；<br>
+  Go语言IDE软件GoLand··· ···</p>
+</font>
+<p>  都是业界不可多得的开发神器。</p>
+<p>  这次的工具取自 <a href="https://www.ypojie.com/">易破解网站</a>，这里有不少资源，感兴趣的朋友可以去看看。</p>
+<figure data-type="image" tabindex="1"><img src="https://TomNick23.GitHub.io/post-images/1603559174505.png" alt="" loading="lazy"></figure>
+]]></summary>
+        <content type="html"><![CDATA[<p>  其实猫咪老师是第一次听到1024程序猿节的概念，可能因为我还不是程序猿吧（卑微小白内心独白）。</p>
+<p>  不过我想我的号暂时不会有程序猿的受众的，值此特殊的日子里，今天推送点啥呢？想想还是为初学者推荐一下开发环境最好不过了（PS:我没有劝人入坑哈）。</p>
+<p>  今天推荐的这款是JetBrains2020.1.2全系列产品的激活和汉化补丁。学习编程的朋友们应该都对这个产品有所耳闻。JetBrains捷克软件开发公司出品的编程语言集成开发环境，专为软件开发软件编程人员制作的各类应用工具箱，如:</p>
+<font face="黑体"  size=3>
+<p>  PHP集成开发工具PHPStorm；<br>
+  Java整合开发工具IntelliJ IDEA；<br>
+  Python集成开发工具PyCharm；<br>
+  HTML/CSS/JS开发工具WebStorm；<br>
+  专为Ruby和Rails开发者准备的IDE工具RubyMine；<br>
+  Objective-C的集成开发环境AppCode；<br>
+  Visual Studio .NET集成开发环境的插件ReSharper；<br>
+  数据库管理工具DataGrip；<br>
+  C/C++ 开发神器 CLion；<br>
+  C#编辑器Rider；<br>
+  Go语言IDE软件GoLand··· ···</p>
+</font>
+<p>  都是业界不可多得的开发神器。</p>
+<p>  这次的工具取自 <a href="https://www.ypojie.com/">易破解网站</a>，这里有不少资源，感兴趣的朋友可以去看看。</p>
+<figure data-type="image" tabindex="1"><img src="https://TomNick23.GitHub.io/post-images/1603559174505.png" alt="" loading="lazy"></figure>
+]]></content>
+    </entry>
     <entry>
         <title type="html"><![CDATA[华为全球新品线上发布会，乌云遮不住漫天繁星]]></title>
         <id>https://TomNick23.GitHub.io/huawei/</id>
